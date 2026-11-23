@@ -1,0 +1,13 @@
+@extends('layouts.placeholder')
+@section('page-title', 'Masuk Buyer')
+@section('user-role', 'buyer')
+@section('active-nav', 'home')
+@section('hide-top', '1')
+@section('hide-bottom', '1')
+@section('main-class', 'full-main')
+@section('content')
+<div class="auth-wrap"><div class="auth-card"><div class="auth-intro"><div class="brand-mark"><svg viewBox="0 0 48 48" fill="none"><path d="M31 7A18 18 0 1 0 27 42" stroke="white" stroke-width="5" stroke-linecap="round"/><path d="M7 23h13l-5-5m5 5-5 5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="29" r="9" stroke="white" stroke-width="4"/><path d="m37 36 7 7" stroke="white" stroke-width="4" stroke-linecap="round"/></svg></div><h1>Selamat Datang Kembali</h1><p>Silakan masuk untuk melanjutkan<br>perjalanan Anda.</p></div><form class="auth-form" data-demo-login novalidate><label class="field"><span>Email</span><div class="field-control"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg><input id="login-email" type="email" name="email" placeholder="nama@email.com" autocomplete="email" required></div></label><label class="field"><span class="flex-between">Kata Sandi <a href="{{ url('/preview/buyer/help/index') }}" class="text-link">Lupa Password?</a></span><div class="field-control"><svg class="icon " aria-hidden="true"><use href="#i-lock"></use></svg><input id="login-pass" type="password" name="password" placeholder="••••••••" autocomplete="current-password" required><button type="button" class="icon-button" data-toggle-password="#login-pass" aria-label="Lihat kata sandi"><svg class="icon " aria-hidden="true"><use href="#i-eye"></use></svg></button></div></label><button id="login-submit" class="btn primary block" type="submit" disabled>Masuk <svg class="icon " aria-hidden="true"><use href="#i-arrow-right"></use></svg></button></form><p class="auth-footer">Belum punya akun? <a class="text-link" href="{{ url('/preview/buyer/register') }}" >Daftar</a></p></div><div class="safe-labels"><span><svg class="icon " aria-hidden="true"><use href="#i-shield"></use></svg> Aman & Terenkripsi</span><span><svg class="icon " aria-hidden="true"><use href="#i-headphones"></use></svg> Bantuan 24/7</span></div></div>
+@endsection
+@push('page-scripts')
+<script>document.addEventListener('DOMContentLoaded',()=>{const e=document.getElementById('login-email'),p=document.getElementById('login-pass'),b=document.getElementById('login-submit');const check=()=>b.disabled=!(e.validity.valid&&e.value.trim()&&p.value.trim());e.addEventListener('input',check);p.addEventListener('input',check);});</script>
+@endpush

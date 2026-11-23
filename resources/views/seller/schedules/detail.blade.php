@@ -1,0 +1,7 @@
+@extends('layouts.placeholder')
+@section('page-title', 'Detail Jadwal')
+@section('user-role', 'seller')
+@section('active-nav', 'jadwal')
+@section('content')
+<div class="section-heading "><h1>Detail Jadwal</h1><p>Informasi jadwal dan ketersediaan kursi.</p></div><section class="card "><div class="route-box"><div class="route-line"><div><strong>Surabaya</strong><small>SBY · Kota Asal</small></div><div class="route-middle"><span>2j 30m</span><svg class="icon " aria-hidden="true"><use href="#i-arrow-right"></use></svg></div><div class="text-right"><strong>Malang</strong><small>MLG · Tujuan</small></div></div><div class="route-meta"><span><svg class="icon " aria-hidden="true"><use href="#i-calendar"></use></svg> Sabtu, 24 Oktober 2026</span><span><svg class="icon " aria-hidden="true"><use href="#i-clock"></use></svg> 14:00 – 16:30</span></div><div class="route-bottom"><span>Harga mulai</span><strong>Rp 125.000</strong></div></div><div class="bill"><span>Armada</span><b>Toyota Hiace</b></div><div class="bill"><span>Kapasitas</span><b>12 Penumpang</b></div><div class="bill"><span>Kursi Tersedia</span><b>6 Kursi</b></div><div class="bill"><span>Status</span><span class="pill success">Aktif</span></div></section><a class="btn primary block" href="{{ url('/preview/seller/schedules/form') }}" >Edit Jadwal</a><a class="btn outline block" href="{{ url('/preview/seller/schedules/reschedule') }}" >Reschedule Jadwal</a>
+@endsection

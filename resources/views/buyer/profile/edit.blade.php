@@ -1,0 +1,7 @@
+@extends('layouts.placeholder')
+@section('page-title', 'Edit Profil')
+@section('user-role', 'buyer')
+@section('active-nav', 'profil')
+@section('content')
+<div class="section-heading "><h1>Edit Profil</h1><p>Kelola informasi akun Anda.</p></div><div class="avatar-editor"><div class="avatar xl">ZM</div><button type="button" class="btn outline small" data-toast="Unggah foto akan tersedia setelah backend terhubung.">Ubah Foto</button></div><section class="card "><form data-demo-navigate="{{ url('/preview/buyer/profile/success') }}" method="post" class="stack form-demo"><label class="field"><span>Nama Lengkap</span><div class="field-control"><svg class="icon " aria-hidden="true"><use href="#i-user"></use></svg><input type="text" name="nama" placeholder="Zayn Malik" required></div></label><label class="field"><span>Email</span><div class="field-control"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg><input type="email" name="email" placeholder="zayn@example.com" required></div></label><label class="field"><span>Nomor Telepon</span><div class="field-control"><svg class="icon " aria-hidden="true"><use href="#i-phone"></use></svg><input type="tel" name="nomor_hp" placeholder="08xxxxxxxxxx" required></div></label><label class="field"><span>Alamat</span><textarea name="alamat" rows="4" placeholder="Masukkan alamat lengkap"></textarea></label><button type="submit" class="btn primary block">Simpan Perubahan <svg class="icon " aria-hidden="true"><use href="#i-arrow-right"></use></svg></button></form></section>
+@endsection
